@@ -8,6 +8,8 @@ public class Livro extends Produto {
     private String escritor;
     private String editora;
 
+    private boolean publicoAdulto = false;
+
     public Livro(String nome, Integer id, Double preco, TipoProduto tipoProduto, String genero, String escritor, String editora) {
         super(nome, id, preco, tipoProduto);
         this.genero = genero;
@@ -37,6 +39,16 @@ public class Livro extends Produto {
 
     public void setEditora(String editora) {
         this.editora = editora;
+    }
+
+    public void paraAdultos(boolean paraAdultos){
+        if (paraAdultos) {
+            publicoAdulto = true;
+        }
+    }
+
+    public boolean getParaAdultos(){
+        return this.publicoAdulto;
     }
 
     @Override

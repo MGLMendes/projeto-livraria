@@ -7,6 +7,8 @@ public class AlbumMusica extends Produto {
     private String generos;
     private String selos;
 
+    private boolean publicoAdulto = false;
+
     public AlbumMusica(String nome, Integer id, Double preco, TipoProduto tipoProduto, String musicosBanda, String generos, String selos) {
         super(nome, id, preco, tipoProduto);
         this.musicosBanda = musicosBanda;
@@ -36,6 +38,16 @@ public class AlbumMusica extends Produto {
 
     public void setSelos(String selos) {
         this.selos = selos;
+    }
+
+    public void paraAdultos(boolean paraAdultos){
+        if (paraAdultos) {
+            publicoAdulto = true;
+        }
+    }
+
+    public boolean getParaAdultos(){
+        return this.publicoAdulto;
     }
 
     @Override

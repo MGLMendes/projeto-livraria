@@ -6,6 +6,8 @@ public class Brinquedo extends Produto{
 
     private String tipo;
 
+    private boolean publicoAdulto = false;
+
     public Brinquedo(String nome, Integer id, Double preco, TipoProduto tipoProduto, String tipo) {
         super(nome, id, preco, tipoProduto);
         this.tipo = tipo;
@@ -17,6 +19,16 @@ public class Brinquedo extends Produto{
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public void paraAdultos(boolean paraAdultos){
+        if (paraAdultos) {
+            publicoAdulto = true;
+        }
+    }
+
+    public boolean getParaAdultos(){
+        return this.publicoAdulto;
     }
 
     @Override

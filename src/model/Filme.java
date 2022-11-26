@@ -9,6 +9,8 @@ public class Filme extends Produto {
     private String genero;
     private String produtores;
 
+
+
     public Filme(String nome, Integer id, Double preco, TipoProduto tipoProduto, String estudio, String diretores, String genero, String produtores) {
         super(nome, id, preco, tipoProduto);
         this.estudio = estudio;
@@ -48,6 +50,7 @@ public class Filme extends Produto {
     public void setProdutores(String produtores) {
         this.produtores = produtores;
     }
+
 
     @Override
     public String toString() {

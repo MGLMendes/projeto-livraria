@@ -21,5 +21,7 @@ public interface InterfaceEstoque<T extends Produto> {
 
     void verProdutos();
 
+    double getValorTotalProdutos();
+
     void verProdutoEspecifico(TipoProduto tipoProduto);
 }

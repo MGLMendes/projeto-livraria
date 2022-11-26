@@ -8,6 +8,8 @@ public class Jogo extends Produto{
     private String genero;
     private String estudio;
 
+    private boolean publicoAdulto = false;
+
     public Jogo(String nome, Integer id, Double preco, TipoProduto tipoProduto, String distribuidora, String genero, String estudio) {
         super(nome, id, preco, tipoProduto);
         this.distribuidora = distribuidora;
@@ -37,6 +39,16 @@ public class Jogo extends Produto{
 
     public void setEstudio(String estudio) {
         this.estudio = estudio;
+    }
+
+    public void paraAdultos(boolean paraAdultos){
+        if (paraAdultos) {
+            publicoAdulto = true;
+        }
+    }
+
+    public boolean getParaAdultos(){
+        return this.publicoAdulto;
     }
 
     @Override

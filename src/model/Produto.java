@@ -9,6 +9,8 @@ public class Produto {
 
     private TipoProduto tipoProduto;
 
+    private boolean publicoAdulto = false;
+
     public Produto(String nome, Integer id, Double preco, TipoProduto tipoProduto) {
         this.nome = nome;
         this.id = id;
@@ -46,6 +48,17 @@ public class Produto {
 
     public void setTipoProduto(TipoProduto tipoProduto) {
         this.tipoProduto = tipoProduto;
+    }
+
+
+    public void paraAdultos(boolean paraAdultos){
+        if (paraAdultos) {
+            publicoAdulto = true;
+        }
+    }
+
+    public boolean getParaAdultos(){
+        return this.publicoAdulto;
     }
 
     @Override

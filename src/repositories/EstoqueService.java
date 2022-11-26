@@ -36,6 +36,8 @@ public class EstoqueService<T extends Produto> implements InterfaceEstoque<T> {
         return null;
     }
 
+
+
     @Override
     public void addProduto(T produto) {
         produtos.add(produto);
@@ -74,6 +76,16 @@ public class EstoqueService<T extends Produto> implements InterfaceEstoque<T> {
         produtos.forEach(
                 System.out::println
         );
+    }
+
+    @Override
+    public double getValorTotalProdutos() {
+        int valorTotal = 0;
+        for (T produto : produtos) {
+            valorTotal += produto.getPreco();
+        }
+
+        return valorTotal;
     }
 
     @Override
